@@ -4,7 +4,7 @@ const TermsOfServicePage = () => {
       <h1 style={{ fontSize: '24px', marginBottom: '20px', fontWeight: 'bold', textAlign: 'center' }}>Terms of Service</h1>
       <div style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '20px' }}>
         <p>
-          Welcome to our hotel reservation system software! These Terms of Service govern your use of our software and any related services provided by us.
+          Welcome to Voyage Vista! These Terms of Service govern your use of our software and any related services provided by us.
         </p>
         <p>
           By accessing or using our software, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our software.
