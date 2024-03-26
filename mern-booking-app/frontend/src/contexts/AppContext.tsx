@@ -13,8 +13,10 @@ type ToastMessage = {
 
 type AppContext = {
   showToast: (toastMessage: ToastMessage) => void;
+  isAdmin: boolean;
   isLoggedIn: boolean;
   stripePromise: Promise<Stripe | null>;
+  handleSignIn: (admin: boolean) => void;
 };
 
 const AppContext = React.createContext<AppContext | undefined>(undefined);
@@ -27,11 +29,13 @@ export const AppContextProvider = ({
   children: React.ReactNode;
 }) => {
   const [toast, setToast] = useState<ToastMessage | undefined>(undefined);
-
+  const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const { isError } = useQuery("validateToken", apiClient.validateToken, {
     retry: false,
   });
-
+  const handleSignIn = (admin: boolean) => {
+    setIsAdmin(admin); // Update isAdmin state based on user's choice
+  };
   return (
     <AppContext.Provider
       value={{
@@ -39,7 +43,9 @@ export const AppContextProvider = ({
           setToast(toastMessage);
         },
         isLoggedIn: !isError,
+        isAdmin,
         stripePromise,
+        handleSignIn,
       }}
     >
       {toast && (

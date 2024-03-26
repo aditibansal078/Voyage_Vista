@@ -22,6 +22,18 @@ const DetailsSection = () => {
         )}
       </label>
 
+      <label className="text-gray-700 text-sm font-bold flex-1">
+        Owner
+        <input
+          type="text"
+          className="border rounded w-full py-1 px-2 font-normal"
+          {...register("owner", { required: "This field is required" })}
+        ></input>
+        {errors.owner && (
+          <span className="text-red-500">{errors.owner.message}</span>
+        )}
+      </label>
+
       <div className="flex gap-4">
         <label className="text-gray-700 text-sm font-bold flex-1">
           City

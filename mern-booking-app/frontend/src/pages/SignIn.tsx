@@ -3,6 +3,8 @@ import { useMutation, useQueryClient } from "react-query";
 import * as apiClient from "../api-client";
 import { useAppContext } from "../contexts/AppContext";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import ReactSwitch from "react-switch";
 
 export type SignInFormData = {
   email: string;
@@ -10,7 +12,7 @@ export type SignInFormData = {
 };
 
 const SignIn = () => {
-  const { showToast } = useAppContext();
+  const { showToast, handleSignIn } = useAppContext();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
@@ -22,17 +24,30 @@ const SignIn = () => {
     handleSubmit,
   } = useForm<SignInFormData>();
 
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  const handleChange = (checked: boolean) => {
+    setIsAdmin(checked);
+  };
+
   const mutation = useMutation(apiClient.signIn, {
     onSuccess: async () => {
       showToast({ message: "Sign in Successful!", type: "SUCCESS" });
       await queryClient.invalidateQueries("validateToken");
-      navigate(location.state?.from?.pathname || "/");
+      handleSignIn(isAdmin);
+      if (isAdmin) {
+        // If isAdmin is true (admin mode), navigate to the view hotels page
+        navigate("/my-hotels");
+      } else {
+        // If isAdmin is false (customer mode), navigate to the previous location or root path
+        navigate(location.state?.from?.pathname || "/");
+      }
     },
     onError: (error: Error) => {
       showToast({ message: error.message, type: "ERROR" });
     },
   });
-
+  
   const onSubmit = handleSubmit((data) => {
     mutation.mutate(data);
   });
@@ -40,6 +55,17 @@ const SignIn = () => {
   return (
     <form className="flex flex-col gap-5" onSubmit={onSubmit}>
       <h2 className="text-3xl font-bold">Sign In</h2>
+      <div className="flex left items-center mt-3">
+        <h4 className="font-bold mr-4">Customer</h4>
+        <ReactSwitch
+          checked={isAdmin}
+          onChange={handleChange}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          onColor="#4CAF50"
+        />
+        <h4 className="font-bold ml-4">Admin</h4>
+      </div>
       <label className="text-gray-700 text-sm font-bold flex-1">
         Email
         <input
