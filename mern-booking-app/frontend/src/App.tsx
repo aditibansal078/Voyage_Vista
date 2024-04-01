@@ -13,6 +13,7 @@ import MyBookings from './pages/MyBookings';
 import Home from './pages/Home';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TermsOfServicePage from './components/TermsOfServicePage'; // Import TermsOfServicePage
+import HotelBookings from './pages/HotelBookings';
 
 const App = () => {
   const { isLoggedIn } = useAppContext();
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/edit-hotel/:hotelId" element={<Layout><EditHotel /></Layout>} />
             <Route path="/my-hotels" element={<Layout><MyHotels /></Layout>} />
             <Route path="/my-bookings" element={<Layout><MyBookings /></Layout>} />
+            <Route path="/hotel-bookings" element={<Layout><HotelBookings /></Layout>} />
           </>
         )}
         

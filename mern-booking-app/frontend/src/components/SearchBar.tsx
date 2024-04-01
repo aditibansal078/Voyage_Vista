@@ -11,7 +11,9 @@ const SearchBar = () => {
 
   const [destination, setDestination] = useState<string>(search.destination);
   const [checkIn, setCheckIn] = useState<Date>(search.checkIn);
-  const [checkOut, setCheckOut] = useState<Date>(search.checkOut);
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const [checkOut, setCheckOut] = useState<Date>(tomorrow);
   const [adultCount, setAdultCount] = useState<number>(search.adultCount);
   const [childCount, setChildCount] = useState<number>(search.childCount);
 
@@ -88,7 +90,7 @@ const SearchBar = () => {
         <DatePicker
           selected={checkOut}
           onChange={(date) => setCheckOut(date as Date)}
-          selectsStart
+          selectsEnd
           startDate={checkIn}
           endDate={checkOut}
           minDate={minDate}
@@ -96,6 +98,7 @@ const SearchBar = () => {
           placeholderText="Check-out Date"
           className="min-w-full bg-white p-2 focus:outline-none"
           wrapperClassName="min-w-full"
+          excludeDates={checkIn ? Array.from({ length: (checkIn.getTime() - minDate.getTime()) / (1000 * 60 * 60 * 24) + 2 }, (_, index) => new Date(minDate.getTime() + index * (1000 * 60 * 60 * 24))) : []}
         />
       </div>
       <div className="flex gap-1">

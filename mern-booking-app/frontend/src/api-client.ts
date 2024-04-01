@@ -248,3 +248,37 @@ export const fetchMyBookings = async (): Promise<HotelType[]> => {
 
   return response.json();
 };
+
+//
+
+export const fetchMyHotelBookings = async (ownerName: string): Promise<HotelType[]> => {
+  const hotelsResponse = await fetch(`${API_BASE_URL}/api/my-hotels?owner=${ownerName}`, {
+    credentials: "include",
+  });
+
+  if (!hotelsResponse.ok) {
+    throw new Error("Error fetching hotels");
+  }
+
+  const hotelsData = await hotelsResponse.json();
+
+  const hotelIds = hotelsData.map((hotel: HotelType) => hotel._id);
+
+  const hotelBookings: HotelType[] = [];
+
+  for (const hotelId of hotelIds) {
+    const bookingsResponse = await fetch(`${API_BASE_URL}/api/hotels/${hotelId}/bookings`, {
+      credentials: "include",
+    });
+
+    if (!bookingsResponse.ok) {
+      throw new Error("Error fetching bookings");
+    }
+
+    const bookings = await bookingsResponse.json();
+    hotelBookings.push(...bookings);
+  }
+
+  return hotelBookings;
+};
+

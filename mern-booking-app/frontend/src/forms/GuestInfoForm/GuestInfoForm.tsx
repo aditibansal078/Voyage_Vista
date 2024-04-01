@@ -21,7 +21,8 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
   const { isLoggedIn } = useAppContext();
   const navigate = useNavigate();
   const location = useLocation();
-
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
   const {
     watch,
     register,
@@ -31,7 +32,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
   } = useForm<GuestInfoFormData>({
     defaultValues: {
       checkIn: search.checkIn,
-      checkOut: search.checkOut,
+      checkOut: tomorrow,
       adultCount: search.adultCount,
       childCount: search.childCount,
     },
@@ -68,7 +69,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
 
   return (
     <div className="flex flex-col p-4 bg-blue-200 gap-4">
-      <h3 className="text-md font-bold">£{pricePerNight}</h3>
+      <h3 className="text-md font-bold">Rs {pricePerNight}</h3>
       <form
         onSubmit={
           isLoggedIn ? handleSubmit(onSubmit) : handleSubmit(onSignInClick)
@@ -102,6 +103,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
               maxDate={maxDate}
               placeholderText="Check-in Date"
               className="min-w-full bg-white p-2 focus:outline-none"
+              excludeDates={checkIn ? Array.from({ length: (checkIn.getTime() - minDate.getTime()) / (1000 * 60 * 60 * 24) + 2 }, (_, index) => new Date(minDate.getTime() + index * (1000 * 60 * 60 * 24+1))) : []}
               wrapperClassName="min-w-full"
             />
           </div>
