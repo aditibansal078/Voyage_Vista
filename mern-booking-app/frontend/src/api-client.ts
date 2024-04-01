@@ -197,14 +197,15 @@ export const fetchHotelById = async (hotelId: string): Promise<HotelType> => {
 
 export const createPaymentIntent = async (
   hotelId: string,
-  numberOfNights: string
+  numberOfNights: string,
+  description: string // Add description parameter
 ): Promise<PaymentIntentResponse> => {
   const response = await fetch(
     `${API_BASE_URL}/api/hotels/${hotelId}/bookings/payment-intent`,
     {
       credentials: "include",
       method: "POST",
-      body: JSON.stringify({ numberOfNights }),
+      body: JSON.stringify({ numberOfNights, description }), // Include description in the request body
       headers: {
         "Content-Type": "application/json",
       },

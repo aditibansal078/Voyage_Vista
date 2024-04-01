@@ -30,13 +30,14 @@ const Booking = () => {
     () =>
       apiClient.createPaymentIntent(
         hotelId as string,
-        numberOfNights.toString()
+        numberOfNights.toString(),
+        "Description for payment intent" 
       ),
     {
       enabled: !!hotelId && numberOfNights > 0,
     }
   );
-
+  
   const { data: hotel } = useQuery(
     "fetchHotelByID",
     () => apiClient.fetchHotelById(hotelId as string),
