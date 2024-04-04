@@ -1,33 +1,32 @@
 import express, { Request, Response } from "express";
 import verifyToken from "../middleware/auth";
 import Hotel from "../models/hotel";
-import { HotelType } from "../shared/types";
 
 const router = express.Router();
 
 router.get("/", verifyToken, async (req: Request, res: Response) => {
   try {
     const hotels = await Hotel.find({
-      "bookings.userId": req.userId
+      ".userId": req.userId
     });
 
-    const results = hotels.map((hotel) => {
-      const userBookings = hotel.bookings.filter(
-        (booking) => booking.userId === req.userId
-      );
+    const hotelBookings: { hotelName: string; bookings: any[] }[] = [];
+    
+    hotels.forEach((hotel) => {
+      const hotelName = hotel.name;
+      const bookings = hotel.bookings.map((booking) => {
+        if (booking.userId === req.userId) {
+          return booking;
+        }
+      }).filter(Boolean);
 
-      const hotelWithUserBookings: HotelType = {
-        ...hotel.toObject(),
-        bookings: userBookings,
-      };
-
-      return hotelWithUserBookings;
+      hotelBookings.push({ hotelName, bookings });
     });
 
-    res.status(200).send(results);
+    res.status(200).send(hotelBookings);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Unable to fetch bookings" });
+    res.status(500).json({ message: "Unable to fetch hotel bookings" });
   }
 });
 

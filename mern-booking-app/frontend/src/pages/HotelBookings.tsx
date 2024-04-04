@@ -2,11 +2,11 @@ import { useQuery } from "react-query";
 import * as apiClient from "../api-client";
 
 const MyBookings = () => {
-    const { data: hotels } = useQuery(
-        "fetchMyHotelBookings",
-        () => apiClient.fetchMyHotelBookings("Komal Jain"), // Change "Komal Jain" to the desired owner's name
-      );
-      
+  const { data: hotels } = useQuery(
+    "fetchMyHotels",
+    () => apiClient.fetchMyHotels(),
+  );
+  
   if (!hotels || hotels.length === 0) {
     return <span>No bookings found</span>;
   }
@@ -15,11 +15,12 @@ const MyBookings = () => {
     <div className="space-y-5">
       <h1 className="text-3xl font-bold">My Bookings</h1>
       {hotels.map((hotel) => (
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] border border-slate-300 rounded-lg p-8 gap-5">
+        <div key={hotel.name} className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] border border-slate-300 rounded-lg p-8 gap-5">
           <div className="lg:w-full lg:h-[250px]">
             <img
               src={hotel.imageUrls[0]}
               className="w-full h-full object-cover object-center"
+              alt={`Image of ${hotel.name}`}
             />
           </div>
           <div className="flex flex-col gap-4 overflow-y-auto max-h-[300px]">
@@ -29,10 +30,22 @@ const MyBookings = () => {
                 {hotel.city}, {hotel.country}
               </div>
             </div>
-            {hotel.bookings.map((booking) => (
-              <div>
+            {hotel.bookings && hotel.bookings.length > 0 && hotel.bookings.map((booking) => (
+              <div key={booking._id}>
                 <div>
-                  <span className="font-bold mr-2">Dates: </span>
+                  <span className="font-bold mr-2">Name: </span>
+                  <span>
+                    {booking.firstName} {booking.lastName}
+                  </span>
+                </div>
+                <div>
+                  <span className="font-bold mr-3">Email: </span>
+                  <span>
+                    {booking.email}
+                  </span>
+                </div>
+                <div>
+                  <span className="font-bold mr-3">Dates: </span>
                   <span>
                     {new Date(booking.checkIn).toDateString()} -
                     {new Date(booking.checkOut).toDateString()}
@@ -44,8 +57,15 @@ const MyBookings = () => {
                     {booking.adultCount} adults, {booking.childCount} children
                   </span>
                 </div>
+                <div>
+                  <span className="font-bold mr-5">Price:</span>
+                  <span>
+                    Rs.{booking.totalCost}
+                  </span>
+                </div>
               </div>
             ))}
+            {(!hotel.bookings || hotel.bookings.length === 0) && <div>No bookings found for this hotel</div>}
           </div>
         </div>
       ))}

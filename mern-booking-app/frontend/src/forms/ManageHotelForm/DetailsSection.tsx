@@ -22,7 +22,7 @@ const DetailsSection = () => {
         )}
       </label>
 
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      {/* <label className="text-gray-700 text-sm font-bold flex-1">
         Owner
         <input
           type="text"
@@ -32,7 +32,7 @@ const DetailsSection = () => {
         {errors.owner && (
           <span className="text-red-500">{errors.owner.message}</span>
         )}
-      </label>
+      </label> */}
 
       <div className="flex gap-4">
         <label className="text-gray-700 text-sm font-bold flex-1">
