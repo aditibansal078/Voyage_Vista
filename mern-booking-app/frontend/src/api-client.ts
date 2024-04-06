@@ -219,7 +219,7 @@ export const createPaymentIntent = async (
   return response.json();
 };
 
-export const createRoomBooking = async (formData: BookingFormData) => {
+export const createRoomBooking = async (formData: BookingFormData, userEmail: string) => {
   const response = await fetch(
     `${API_BASE_URL}/api/hotels/${formData.hotelId}/bookings`,
     {
@@ -228,7 +228,7 @@ export const createRoomBooking = async (formData: BookingFormData) => {
         "Content-Type": "application/json",
       },
       credentials: "include",
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ ...formData, userEmail }), // Include userEmail in the request body
     }
   );
 

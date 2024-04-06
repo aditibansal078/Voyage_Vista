@@ -39,7 +39,7 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
   const { showToast } = useAppContext();
 
   const { mutate: bookRoom, isLoading } = useMutation(
-    apiClient.createRoomBooking,
+    (formData: BookingFormData) => apiClient.createRoomBooking(formData, currentUser.email), // Closure to include userEmail
     {
       onSuccess: () => {
         showToast({ message: "Booking Saved!", type: "SUCCESS" });
@@ -48,7 +48,7 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
         showToast({ message: "Error saving booking", type: "ERROR" });
       },
     }
-  );
+  );  
 
   const { handleSubmit, register } = useForm<BookingFormData>({
     defaultValues: {
@@ -69,18 +69,26 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
     if (!stripe || !elements) {
       return;
     }
-
+  
     const result = await stripe.confirmCardPayment(paymentIntent.clientSecret, {
       payment_method: {
         card: elements.getElement(CardElement) as StripeCardElement,
+        billing_details: {
+          email: formData.email, // Include user's email in billing details
+        },
       },
     });
-
+  
     if (result.paymentIntent?.status === "succeeded") {
-      bookRoom({ ...formData, paymentIntentId: result.paymentIntent.id });
+      try {
+        await bookRoom(formData); // Invoke bookRoom with formData
+        showToast({ message: "Booking Saved!", type: "SUCCESS" });
+      } catch (error) {
+        showToast({ message: "Error saving booking", type: "ERROR" });
+      }
     }
-  };
-
+  };  
+  
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
