@@ -1,380 +1,56 @@
 [
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc606"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Dublin Getaways",
-    "city": "Dublin",
-    "country": "Ireland",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies sodales rhoncus. Mauris nisl sapien, interdum vitae mi et, porttitor faucibus velit. Duis quis nisl feugiat, volutpat leo a, efficitur lectus. Praesent vulputate turpis nec sapien vulputate tincidunt. Maecenas vitae aliquam ipsum. Ut ultricies hendrerit ante eget vehicula. Cras sit amet semper odio. Pellentesque lacinia, sapien a tristique ultrices, augue diam interdum nulla, non porttitor ligula nisl at nibh. Aenean in lobortis velit, sed hendrerit mi. Nam leo sem, laoreet quis diam eget, euismod lobortis purus. Aenean laoreet dui vel diam pulvinar viverra.\r\n\r\nFusce non nisi laoreet, egestas felis dignissim, tempor arcu. Ut feugiat nibh vel sodales suscipit. Phasellus ultricies eget eros id bibendum. Nunc lobortis orci interdum felis bibendum pretium. Vivamus placerat ligula a consequat ultricies. Etiam aliquam nibh vitae efficitur finibus. Duis iaculis tristique sapien. Aenean vel sollicitudin dolor. Aliquam vel nisl id augue pellentesque aliquet.\r\n\r\nFusce a egestas urna. Fusce eu sapien viverra, feugiat risus nec, accumsan enim. Donec vel sapien blandit, semper est non, congue ante. Sed lectus nulla, efficitur nec tortor nec, sollicitudin varius massa. Donec lectus mauris, vehicula ut semper eget, pharetra maximus lacus. Pellentesque pharetra facilisis luctus. Nunc lacus sapien, gravida vitae egestas in, mattis in tellus.",
-    "type": "All Inclusive",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "3"
-    },
-    "facilities": [
-      "Airport Shuttle",
-      "Family Rooms",
-      "Non-Smoking Rooms",
-      "Spa"
-    ],
-    "pricePerNight": {
-      "$numberInt": "119"
-    },
-    "starRating": {
-      "$numberInt": "2"
-    },
-    "imageUrls": [
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/a4ypeock0piore5mbnyy.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/vd9oude4cwkti7s9yp0y.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
+    {
+      "_id": {
+        "$oid": "6566072befbb78591fadc699"
+      },
+      "userId": "6554f2ecd4f07417501dcbf1",
+      "name": "Vivanta Guwahati",
+      "city": "Guwahati",
+      "country": "India",
+      "description": "Located on the Guwahati-Shillong highway in the commercial and cultural heart of the capital of Assam, Vivanta Guwahati is an urban retreat designed for global business travellers, adventurers and connoisseurs of the good life. Offering world-class comforts in an environment with a strong local character, our 5 star hotel in Guwahati is uniquely positioned as a gateway to the Seven Sisters (the seven scintillating North East Indian states). Five acres of manicured gardens, betel nut groves and water bodies usher guests into a space awash with motifs that evoke the soul of Assam. The striking entrance to the main building which houses 150 contemporary rooms and suites is modelled after Rang Ghar, the royal amphitheatre of the mighty Ahom dynasty. Design inspiration is further drawn from the cupola (rounded dome) of the Kamakhya Temple, the gamocha handloom reflected in a modern bamboo interweave, Xingkhap patterns in the rooms, a stunning mural of 1008 cascading sacred bells in the grand lobby and marigold motifs across the hotel. Live the lifestyle of modern-day royals while dining at our specialty restaurants serving avant-garde Chinese, Japanese and classic North and South Indian cuisines. Our secret gastronomic weapon is authentic Assamese cuisine which leverages the Brahmaputra River and valley’s exceptional produce, giving guests a taste of the sub-continent’s rarest ingredients and cooking techniques. Entertain important business guests at our elegant Executive Lounge, and post-wrap up, party with Guwahati’s glitterati at Octave, the glamorous bar lounge. A workout at our 24/7 state-of-the-art Fitness Centre followed by a few laps in the outdoor swimming pool and a relaxing treatment at the award-winning Jiva Spa keep you in top form. Our hotel in Guwahati has an independent convention complex that offers the largest banqueting spaces in the Northeast for business and social events. Our Concierge service’s insider knowledge guides you in exploring the best that Assam has to offer. From participating in joyful bihu dance performances on the hotel lawns, shopping for exquisite silk mekhala chadors (the traditional Assamese dress) at the weavers village of Sualkuchi, sunset dinners on the Brahmaputra and tours of Assam’s world-class tea gardens to exploring the UNESCO World Heritage wildlife parks – Kaziranga and Manas – Vivanta Guwahati puts a special spin on your discovery of Assam and the Seven Sisters.",
+      "type": "Hotel",
+      "adultCount": 2,
+      "childCount": 1,
+      "facilities": [
+        "City Views",
+        "Fitness Center",
+        "Concierge Service",
+        "Room Service",
+        "Airport Shuttle",
+        "Family Rooms",
+        "Non-Smoking Rooms",
+        "Outdoor Pool"
+      ],
+      "pricePerNight": 4500,
+      "starRating": 4,
+      "imageUrls": [
+        "https://res.cloudinary.com/de07adnoo/image/upload/v1711547453/Voyage%20Vista/Vivanta_Guwahati/zuti7edoryjhnvwfbqzh.jpg",
+        "https://res.cloudinary.com/de07adnoo/image/upload/v1711547441/Voyage%20Vista/Vivanta_Guwahati/wk695adkeflrvvowgdku.jpg",
+        "https://res.cloudinary.com/de07adnoo/image/upload/v1711547430/Voyage%20Vista/Vivanta_Guwahati/vvifwkh3tlwngofeadby.jpg"
+      ],
+      "lastUpdated": {
+        "$date": "2023-11-28T15:28:43.228Z"
+      },
+      "__v": 0,
+      "bookings": [
+        {
+          "firstName": "Aditi",
+          "lastName": "Agarwal",
+          "email": "1@1.com",
+          "adultCount": 1,
+          "childCount": 1,
+          "checkIn": {
+            "$date": "2024-04-01T17:31:48.377Z"
+          },
+          "checkOut": {
+            "$date": "2024-04-02T17:32:09.322Z"
+          },
+          "userId": "65f91221a9c389aaf3996d0a",
+          "totalCost": 498,
+          "_id": {
+            "$oid": "660aefadd3e329dc355184d4"
+          }
+        }
+      ]
     }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc607"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Dublin Resort",
-    "city": "Dublin",
-    "country": "Ireland",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies sodales rhoncus. Mauris nisl sapien, interdum vitae mi et, porttitor faucibus velit. Duis quis nisl feugiat, volutpat leo a, efficitur lectus. Praesent vulputate turpis nec sapien vulputate tincidunt. Maecenas vitae aliquam ipsum. Ut ultricies hendrerit ante eget vehicula. Cras sit amet semper odio. Pellentesque lacinia, sapien a tristique ultrices, augue diam interdum nulla, non porttitor ligula nisl at nibh. Aenean in lobortis velit, sed hendrerit mi. Nam leo sem, laoreet quis diam eget, euismod lobortis purus. Aenean laoreet dui vel diam pulvinar viverra.\r\n\r\nFusce non nisi laoreet, egestas felis dignissim, tempor arcu. Ut feugiat nibh vel sodales suscipit. Phasellus ultricies eget eros id bibendum. Nunc lobortis orci interdum felis bibendum pretium. Vivamus placerat ligula a consequat ultricies. Etiam aliquam nibh vitae efficitur finibus. Duis iaculis tristique sapien. Aenean vel sollicitudin dolor. Aliquam vel nisl id augue pellentesque aliquet.\r\n\r\nFusce a egestas urna. Fusce eu sapien viverra, feugiat risus nec, accumsan enim. Donec vel sapien blandit, semper est non, congue ante. Sed lectus nulla, efficitur nec tortor nec, sollicitudin varius massa. Donec lectus mauris, vehicula ut semper eget, pharetra maximus lacus. Pellentesque pharetra facilisis luctus. Nunc lacus sapien, gravida vitae egestas in, mattis in tellus.",
-    "type": "All Inclusive",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "3"
-    },
-    "facilities": [
-      "Airport Shuttle",
-      "Family Rooms",
-      "Non-Smoking Rooms",
-      "Spa"
-    ],
-    "pricePerNight": {
-      "$numberInt": "119"
-    },
-    "starRating": {
-      "$numberInt": "2"
-    },
-    "imageUrls": [
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942213/ex1xepvoocatmcoqkryq.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/vd9oude4cwkti7s9yp0y.jpg",
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942214/coqghljlxigjyvhayxuw.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc608"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Luxury Inn",
-    "city": "London",
-    "country": "United Kingdom",
-    "description": "Experience luxury like never before at Luxury Inn. Our hotel offers premium amenities and services, including spacious rooms, gourmet dining, and a state-of-the-art spa. Located in the heart of London, you'll have easy access to top attractions and entertainment venues. Whether you're traveling for business or pleasure, make Luxury Inn your home away from home.",
-    "type": "Luxury",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "2"
-    },
-    "facilities": [
-      "Spa",
-      "Gourmet Dining",
-      "Fitness Center",
-      "Concierge Service"
-    ],
-    "pricePerNight": {
-      "$numberInt": "299"
-    },
-    "starRating": {
-      "$numberInt": "5"
-    },
-    "imageUrls": [
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942212/fvyi2rwkibmhzwva4ohx.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/vd9oude4cwkti7s9yp0y.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc609"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Beachfront Paradise Resort",
-    "city": "Miami",
-    "country": "United States",
-    "description": "Escape to paradise at Beachfront Paradise Resort. Nestled along the sandy shores of Miami, our resort offers breathtaking ocean views and luxurious accommodations. Enjoy a range of amenities including beachfront dining, infinity pools, and rejuvenating spa treatments. Whether you're seeking relaxation or adventure, Beachfront Paradise Resort promises an unforgettable experience.",
-    "type": "Resort",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "2"
-    },
-    "facilities": [
-      "Beachfront Dining",
-      "Infinity Pools",
-      "Spa",
-      "Water Sports"
-    ],
-    "pricePerNight": {
-      "$numberInt": "399"
-    },
-    "starRating": {
-      "$numberInt": "4"
-    },
-    "imageUrls": [
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942212/sydzd0gypb8n1ewrita2.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/vd9oude4cwkti7s9yp0y.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc610"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "City Center Suites",
-    "city": "New York City",
-    "country": "United States",
-    "description": "Discover the heart of New York City at City Center Suites. Our suites offer unparalleled comfort and convenience, located in the bustling city center near iconic attractions like Times Square and Central Park. Enjoy spacious accommodations, modern amenities, and personalized service during your stay. Whether you're visiting for business or leisure, City Center Suites is your urban oasis.",
-    "type": "Suites",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "1"
-    },
-    "facilities": [
-      "City Views",
-      "Fitness Center",
-      "Concierge Service",
-      "Room Service"
-    ],
-    "pricePerNight": {
-      "$numberInt": "249"
-    },
-    "starRating": {
-      "$numberInt": "4"
-    },
-    "imageUrls": [
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942210/ktkdsa2rz89o8mcf2ijq.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/vd9oude4cwkti7s9yp0y.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc611"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Mountain Retreat",
-    "city": "Aspen",
-    "country": "United States",
-    "description": "Experience the beauty of Aspen at Mountain Retreat. Our resort-style hotel offers stunning views of the surrounding mountains and easy access to outdoor activities year-round. Whether you're hitting the slopes in winter or exploring hiking trails in summer, Mountain Retreat provides a cozy and comfortable base for your adventures. Unwind in our spa or savor gourmet meals at our on-site restaurant.",
-    "type": "Resort",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "2"
-    },
-    "facilities": [
-      "Mountain Views",
-      "Ski Storage",
-      "Spa",
-      "Restaurant"
-    ],
-    "pricePerNight": {
-      "$numberInt": "349"
-    },
-    "starRating": {
-      "$numberInt": "4"
-    },
-    "imageUrls": [
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942209/fexq6xd9f0t4shyhowo7.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/vd9oude4cwkti7s9yp0y.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc612"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Riviera Resort",
-    "city": "Cancun",
-    "country": "Mexico",
-    "description": "Escape to paradise at Riviera Resort, nestled along the pristine shores of Cancun. Our resort offers luxurious accommodations with stunning views of the Caribbean Sea. Enjoy world-class amenities including beachfront dining, infinity pools, and rejuvenating spa treatments. Whether you're seeking relaxation or adventure, Riviera Resort promises an unforgettable experience in the heart of the Riviera Maya.",
-    "type": "Resort",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "2"
-    },
-    "facilities": [
-      "Beachfront Dining",
-      "Infinity Pools",
-      "Spa",
-      "Water Sports"
-    ],
-    "pricePerNight": {
-      "$numberInt": "449"
-    },
-    "starRating": {
-      "$numberInt": "5"
-    },
-    "imageUrls": [
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/a4ypeock0piore5mbnyy.jpg",
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942210/buj3d9ompbdf0ltlqaf9.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc613"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Safari Lodge",
-    "city": "Maasai Mara",
-    "country": "Kenya",
-    "description": "Experience the adventure of a lifetime at Safari Lodge, located in the heart of Maasai Mara. Our lodge offers authentic safari experiences with luxurious accommodations amidst the breathtaking wilderness of Kenya. Explore the rich biodiversity of the Maasai Mara National Reserve and witness the awe-inspiring Great Migration. At Safari Lodge, immerse yourself in the beauty of nature while enjoying top-notch hospitality.",
-    "type": "Lodge",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "1"
-    },
-    "facilities": [
-      "Game Drives",
-      "Bush Walks",
-      "Cultural Visits",
-      "Swimming Pool"
-    ],
-    "pricePerNight": {
-      "$numberInt": "599"
-    },
-    "starRating": {
-      "$numberInt": "4"
-    },
-    "imageUrls": [
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942209/pvfbin8jryzpaagts7qj.jpg",
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942210/npu7jolplkp6nhdtmttv.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  },
-  {
-    "_id": {
-      "$oid": "6566072befbb78591fadc613"
-    },
-    "userId": "6554f2ecd4f07417501dcbf1",
-    "name": "Safari Lodge",
-    "city": "Maasai Mara",
-    "country": "Kenya",
-    "description": "Experience the adventure of a lifetime at Safari Lodge, located in the heart of Maasai Mara. Our lodge offers authentic safari experiences with luxurious accommodations amidst the breathtaking wilderness of Kenya. Explore the rich biodiversity of the Maasai Mara National Reserve and witness the awe-inspiring Great Migration. At Safari Lodge, immerse yourself in the beauty of nature while enjoying top-notch hospitality.",
-    "type": "Lodge",
-    "adultCount": {
-      "$numberInt": "2"
-    },
-    "childCount": {
-      "$numberInt": "1"
-    },
-    "facilities": [
-      "Game Drives",
-      "Bush Walks",
-      "Cultural Visits",
-      "Swimming Pool"
-    ],
-    "pricePerNight": {
-      "$numberInt": "599"
-    },
-    "starRating": {
-      "$numberInt": "4"
-    },
-    "imageUrls": [
-      "https://res.cloudinary.com/dlg29rpds/image/upload/v1710942206/cz6s7drmjc5bpqpipbni.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/vd9oude4cwkti7s9yp0y.jpg",
-      "http://res.cloudinary.com/dr55yjjx4/image/upload/v1701185322/twxkbjmcoy4gzmtwc4li.jpg"
-    ],
-    "lastUpdated": {
-      "$date": {
-        "$numberLong": "1701185323228"
-      }
-    },
-    "__v": {
-      "$numberInt": "0"
-    }
-  }  
 ]

@@ -2,9 +2,9 @@
   "_id": {
     "$oid": "6554f2ecd4f07417501dcbf1"
   },
-  "email": "1@1.com",
+  "email": "aditi.agarwal21b@iiitg.ac.in",
   "password": "$2a$08$034zqQ5mL/zho/IJLUtbt.TUtBgRaaBj.yg85T40EdYhfGOQelaQa",
-  "firstName": "e2e_test_firstName",
-  "lastName": "e2e_test_lastName",
+  "firstName": "_test_firstName",
+  "lastName": "_test_lastName",
   "__v": 0
 }
