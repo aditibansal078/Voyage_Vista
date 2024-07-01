@@ -3,13 +3,6 @@ Voyage Vista: Hotel Reservation System
 
 Voyage Vista is a comprehensive solution designed to facilitate efficient and organized booking processes for accommodations in hotels. This system aims to enhance the overall guest experience and streamline administrative tasks for hotel administrators.
 
-Table of Contents
-
-1. Introduction
-2. Installation
-3. Features
-4. Usage
-
 
  1. Introduction
 
