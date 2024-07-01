@@ -59,4 +59,19 @@ Steps
 
 
 
+![WhatsApp Image 2024-07-01 at 10 42 46 PM](https://github.com/aditibansal078/Voyage_Vista/assets/115947748/ecb53e23-9940-47f3-bb29-e6cb6b62ae11)
+
+
+![WhatsApp Image 2024-07-01 at 10 42 47 PM](https://github.com/aditibansal078/Voyage_Vista/assets/115947748/04efd07c-218f-4d51-957f-ede18f92ac96)
+
+
+![WhatsApp Image 2024-07-01 at 10 42 48 PM](https://github.com/aditibansal078/Voyage_Vista/assets/115947748/eb6424b9-9d23-4427-804f-2b2108571d57)
+
+
+![WhatsApp Image 2024-07-01 at 10 42 48 PM (2)](https://github.com/aditibansal078/Voyage_Vista/assets/115947748/ab20327c-8da6-428f-9be9-fab607d61a74)
+
+
+![WhatsApp Image 2024-07-01 at 10 42 51 PM](https://github.com/aditibansal078/Voyage_Vista/assets/115947748/a4a76d17-2aa0-4fd1-8c2b-8b3c0ffbf035)
+
+
 This README provides a comprehensive overview of the Voyage Vista: Hotel Reservation System, detailing its features, installation steps, usage instructions, and contribution guidelines. We aim to deliver a concise and user-friendly Hotel Reservation System that addresses the core needs of customers and hotel administrators.
